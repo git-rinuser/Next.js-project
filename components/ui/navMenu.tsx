@@ -12,7 +12,7 @@ export function NavMenu() {
   {name: "ホーム", href: "/Home", icon: Home},
   {name: "作業実績", href: "/work-records", icon: Calendar},
   {name: "顧客", href: "/Customer", icon: Briefcase},
-  {name: "プロジェクト", href: "/projects", icon: FileText},
+  {name: "プロジェクト", href: "/Project", icon: FileText},
   {name: "カテゴリ", href: "/Category", icon: Layers},
   {name: "プロセス", href: "/Process", icon: BarChart3},
   {name: "ユーザー", href: "/User", icon: User},

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { deleteProcess, getProcessList, postProcess, ProcessType, putProcess } from '@/actions/process'
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { toast } from 'sonner'
@@ -117,6 +117,12 @@ const ProcessHome = () => {
       <h2>工程一覧</h2>
 
       <Table className='rounded-md border'>
+        <TableHeader>
+          <TableRow>
+            <TableHead>工程番号</TableHead>
+            <TableHead>工程名</TableHead>
+          </TableRow>
+        </TableHeader>
         <TableBody>
         {processes.map((process) => (
           <TableRow key={process.processNo}>

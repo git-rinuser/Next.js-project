@@ -3,7 +3,7 @@
 import { CategoryType, deleteCategory, getCategoryList, PostCategory, putCategory } from '@/actions/category'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { toast } from 'sonner'
@@ -116,6 +116,12 @@ export default function CategoryHome() {
       <h2>作業分類一覧</h2>
 
       <Table className='rounded-md border'>
+        <TableHeader>
+          <TableRow>
+            <TableHead>作業分類番号</TableHead>
+            <TableHead>作業分類名</TableHead>
+          </TableRow>
+        </TableHeader>
         <TableBody>
         {categories.map((category) => (
             <TableRow key={category.categoryNo}>

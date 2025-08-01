@@ -3,7 +3,7 @@
 import { CustomerType, DeleteCustomer, getCutomerList, PostCustomer, PutCustomer } from '@/actions/customer'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { toast } from 'sonner'
@@ -113,6 +113,12 @@ export default function CustomerHome() {
       <h2>顧客一覧</h2>
 
       <Table className='rounded-md border'>
+        <TableHeader>
+          <TableRow>
+            <TableHead>顧客No</TableHead>
+            <TableHead>顧客名</TableHead>
+          </TableRow>
+        </TableHeader>
         <TableBody>
         {customers.map((customer) => (
             <TableRow key={customer.customerNo}>
